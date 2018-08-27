@@ -4,6 +4,7 @@ import Slider from '@material-ui/lab/Slider';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import Checkbox from '@material-ui/core/Checkbox';
 import ReactMoment from 'react-moment';
 import moment from 'moment';
 
@@ -120,6 +121,12 @@ class App extends Component {
       }
     }))
   };
+
+  handleFollowChange = (event, value) => {
+    this.setState({
+      follow: value
+    })
+  }
 
   fileChosen = (event) => {
     this.setState({loadingFile: true})
@@ -240,6 +247,13 @@ class App extends Component {
             max={10}
             step={1}
             onChange={this.handleMaxIntensitySliderChange}/>
+        </label>
+        <label className="sans-serif f3 b">
+          Follow
+          <Checkbox
+            checked={this.state.follow}
+            onChange={this.handleFollowChange}
+          />
         </label>
       </div>
     )
