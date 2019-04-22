@@ -92,7 +92,7 @@ class App extends Component {
   }
 
   prepareMapStyles = () => {
-    this.setState({mapStyle: mapStyles[3]})
+    this.setState({mapStyle: mapStyles[4]})
   }
 
   handleOpacitySliderChange = (event, value) => {
@@ -121,7 +121,7 @@ class App extends Component {
       }
     }))
   };
-
+at
   handleFollowChange = (event, value) => {
     this.setState({
       follow: value
